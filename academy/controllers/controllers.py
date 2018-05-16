@@ -6,8 +6,10 @@ class Academy(http.Controller):
     @http.route('/academy/academy/', auth='public')
     def index(self, **kw):
         # return "Hello, world"
+        Teachers = http.request.env['academy.teachers']
         return http.request.render('academy.index', {
-            'teachers': ["Diana Padilla", "Jody Caroll", "Lester Vaughn"],
+            'teachers': Teachers.search([]),
+            'list_teachers': ["Diana Padilla", "Jody Caroll", "Lester Vaughn"],
         })
 
 
