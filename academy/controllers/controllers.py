@@ -3,7 +3,8 @@ from openerp import http
 
 
 class Academy(http.Controller):
-    @http.route('/academy/academy/', auth='public')
+    @http.route('/academy/academy/', auth='public', website=True)
+    # @http.route('/academy/academy/', auth='public')
     def index(self, **kw):
         # return "Hello, world"
         Teachers = http.request.env['academy.teachers']

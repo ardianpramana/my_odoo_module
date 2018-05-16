@@ -1,16 +1,27 @@
 <openerp>
     <data>
         <template id="index">
-            <title>Academy</title>
-            <p>Using demo data:</p>
-            <t t-foreach="teachers" t-as="teacher">
-                <p><t t-esc="teacher.id"/> <t t-esc="teacher.name"/></p>
+            <t t-call="website.layout">
+                <t t-set="title">Academy</t>
+                <div class="oe_structure">
+                    <div class="container">
+                        <t t-foreach="teachers" t-as="teacher">
+                            <p><t t-esc="teacher.id"/> <t t-esc="teacher.name"/></p>
+                        </t>
+                    </div>
+                </div>
             </t>
-            <br />
-            <p>Using manual list:</p>
-            <t t-foreach="list_teachers" t-as="teacher">
-                <p><t t-esc="teacher"/></p>
-            </t>
+
+            <!--<title>Academy</title>-->
+            <!--<p>Using demo data:</p>-->
+            <!--<t t-foreach="teachers" t-as="teacher">-->
+                <!--<p><t t-esc="teacher.id"/> <t t-esc="teacher.name"/></p>-->
+            <!--</t>-->
+            <!--<br />-->
+            <!--<p>Using manual list:</p>-->
+            <!--<t t-foreach="list_teachers" t-as="teacher">-->
+                <!--<p><t t-esc="teacher"/></p>-->
+            <!--</t>-->
         </template>
 
         <!-- <template id="listing"> -->
