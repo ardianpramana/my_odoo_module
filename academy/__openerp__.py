@@ -3,20 +3,19 @@
     'name': "academy",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        An Academy web created using Odoo""",
 
     'description': """
-        Long description of module's purpose
+        This Academy web is following the official documentation of Building a Web in Odoo-9.0
     """,
 
-    'author': "My Company",
+    'author': "Ardian",
     'website': "http://www.yourcompany.com",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/master/openerp/addons/base/module/module_data.xml
     # for the full list
-    'category': 'Uncategorized',
+    'category': 'Academy',
     'version': '0.1',
 
     # any module necessary for this one to work correctly
