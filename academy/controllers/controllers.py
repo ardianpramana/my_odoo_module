@@ -5,7 +5,11 @@ from openerp import http
 class Academy(http.Controller):
     @http.route('/academy/academy/', auth='public')
     def index(self, **kw):
-        return "Hello, world"
+        # return "Hello, world"
+        return http.request.render('academy.index', {
+            'teachers': ["Diana Padilla", "Jody Caroll", "Lester Vaughn"],
+        })
+
 
 # class Academy(http.Controller):
 #     @http.route('/academy/academy/', auth='public')
