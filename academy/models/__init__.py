@@ -2,3 +2,4 @@
 
 from . import models
 from . import academy_teachers
+from . import academy_courses
