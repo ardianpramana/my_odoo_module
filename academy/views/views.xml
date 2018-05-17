@@ -13,7 +13,7 @@
               action="action_academy_teachers"/>
 
     <record id="academy_teachers_form" model="ir.ui.view">
-      <field name="name">Academy teachers: form</field>
+      <field name="name">Academy Teachers Form</field>
       <field name="model">academy.teachers</field>
       <field name="arch" type="xml">
         <form>
@@ -29,6 +29,10 @@
               </tree>
             </field>
           </sheet>
+          <div class="oe_chatter">
+            <field name="message_follower_ids" widget="mail_followers"/>
+            <field name="message_ids" widget="mail_thread"/>
+          </div>
         </form>
       </field>
     </record>

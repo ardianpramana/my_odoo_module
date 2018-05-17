@@ -5,6 +5,8 @@ from openerp import models, fields, api
 
 class AcademyTeachers(models.Model):
     _name = 'academy.teachers'
+    _description = 'Academy Teachers'
+    _inherit = ['mail.thread']
 
     name = fields.Char()
     biography = fields.Html()
