@@ -7,6 +7,7 @@ class AcademyTeachers(models.Model):
     _name = 'academy.teachers'
 
     name = fields.Char()
+    biography = fields.Html()
 
 
 #     value = fields.Integer()
