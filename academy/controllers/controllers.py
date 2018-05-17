@@ -14,12 +14,18 @@ class Academy(http.Controller):
         })
     
     @http.route('/academy/<name>/', auth='public', website=True)
-    def teacher(self, name):
+    def teacher_string(self, name):
         return '<h1>{}</h1>'.format(name)
 
     @http.route('/academy/list/<int:id>', auth='public', website=True)
-    def teacher_list(self, id):
+    def teacher_int(self, id):
         return '<h1>{} ({})</h1>'.format(id, type(id).__name__)
+
+    @http.route('/academy/<model("academy.teachers"):teacher>', auth='public', website=True)
+    def teacher(self, teacher):
+        return http.request.render('academy.biography', {
+            'person':teacher
+        })
 
 # class Academy(http.Controller):
 #     @http.route('/academy/academy/', auth='public')
