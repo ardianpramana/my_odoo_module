@@ -1,5 +1,32 @@
 <openerp>
   <data>
+    <record id="action_academy_teachers" model="ir.actions.act_window">
+      <field name="name">Academy Teachers</field>
+      <field name="res_model">academy.teachers</field>
+    </record>
+
+    <menuitem sequence="0" id="menu_academy" name="Academy"/>
+    <menuitem id="menu_academy_content" parent="menu_academy"
+              name="Academy Content"/>
+    <menuitem id="menu_academy_content_teachers"
+              parent="menu_academy_content"
+              action="action_academy_teachers"/>
+
+    <record id="academy_teachers_form" model="ir.ui.view">
+      <field name="name">Academy teachers: form</field>
+      <field name="model">academy.teachers</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <label for="name"/>
+            <field name="name" String="Name"/>
+            <label for="biography"/>
+            <field name="biography" String="Biography"/>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
     <!-- explicit list view definition -->
     <!--
     <record model="ir.ui.view" id="academy.list">
