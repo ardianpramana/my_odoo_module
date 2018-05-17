@@ -15,11 +15,11 @@
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/master/openerp/addons/base/module/module_data.xml
     # for the full list
-    'category': 'Academy',
+    'category': 'Sales',
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','mail'],
+    'depends': ['base','website_sale'],
 
     # always loaded
     'data': [
@@ -27,6 +27,7 @@
         'views/views.xml',
         'views/academy_courses_views.xml',
         'views/templates.xml',
+        'data/data.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

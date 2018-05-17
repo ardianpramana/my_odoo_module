@@ -1,0 +1,11 @@
+<openerp>
+    <data>
+        <record id="category_courses" model="product.public.category" >
+            <field name="name">Courses</field>
+            <!--website_sale.categ_others-->
+            <!--<field name="parent_id" />-->
+            <field name="parent_id" ref="product.services"/>
+            <field name="sequence">20</field>
+        </record>
+    </data>
+</openerp>
